@@ -1,0 +1,134 @@
+# Preparation path. Keep its course registration draft until content is ready.
+apiVersion: content.astrona.io/v1alpha1
+kind: TrainingPath
+metadata:
+  id: ATP007
+  slug: certified-kubernetes-security-specialist
+  title: Certified Kubernetes Security Specialist (CKS)
+  description: 'Preparation path for CKS: one training series per curriculum domain. Content authoring
+    is planned.'
+  version: 0.1.0
+  language: en
+  authors:
+  - name: Paris Nakita Kejser
+    email: paris@astrona.io
+    company: Astrona.io
+  tags:
+  - CKS
+  - Certification Preparation
+  license: Apache-2.0
+spec:
+  audience: Learners preparing for Certified Kubernetes Security Specialist (CKS).
+  difficulty: Advanced
+  examPreparation:
+    enabled: true
+    title: Certified Kubernetes Security Specialist (CKS)
+    officialSyllabusUrl: https://training.linuxfoundation.org/certification/certified-kubernetes-security-specialist/
+    examId: CKS
+    provider: CNCF / The Linux Foundation
+  prerequisites:
+  - Basic command-line knowledge and familiarity with the subject of the exam.
+  - A computer capable of running the environments selected during content authoring.
+  - Pass CKA before attempting the CKS exam, as required by The Linux Foundation.
+  learningOutcomes:
+  - Prepare for the Cluster Setup domain.
+  - Prepare for the Cluster Hardening domain.
+  - Prepare for the System Hardening domain.
+  - Prepare for the Minimize Microservice Vulnerabilities domain.
+  - Prepare for the Supply Chain Security domain.
+  - Prepare for the Monitoring, Logging and Runtime Security domain.
+  stages:
+  - id: ATP007-STG001
+    title: Cluster Setup
+    description: Prepare for Cluster Setup.
+    examDomain: Cluster Setup
+    weight: 15
+    learningOutcomes:
+    - Use Network security policies to restrict cluster level access
+    - Use CIS benchmark to review the security configuration of Kubernetes components (etcd, kubelet,
+      kubedns, kubeapi)
+    - Properly set up Ingress with TLS
+    - Protect node metadata and endpoints
+    - Verify platform binaries before deploying
+    content:
+    - ref: ATS031
+      repository: https://github.com/astrona-io/ATS031
+      path: .
+      version: 0.1.0
+  - id: ATP007-STG002
+    title: Cluster Hardening
+    description: Prepare for Cluster Hardening.
+    examDomain: Cluster Hardening
+    weight: 15
+    learningOutcomes:
+    - Use Role Based Access Controls to minimize exposure
+    - Exercise caution in using service accounts e.g. disable defaults, minimize permissions on newly
+      created ones
+    - Restrict access to Kubernetes API
+    - Upgrade Kubernetes to avoid vulnerabilities
+    content:
+    - ref: ATS032
+      repository: https://github.com/astrona-io/ATS032
+      path: .
+      version: 0.1.0
+  - id: ATP007-STG003
+    title: System Hardening
+    description: Prepare for System Hardening.
+    examDomain: System Hardening
+    weight: 10
+    learningOutcomes:
+    - Minimize host OS footprint (reduce attack surface)
+    - Using least-privilege identity and access management
+    - Minimize external access to the network
+    - Appropriately use kernel hardening tools such as AppArmor, seccomp
+    content:
+    - ref: ATS033
+      repository: https://github.com/astrona-io/ATS033
+      path: .
+      version: 0.1.0
+  - id: ATP007-STG004
+    title: Minimize Microservice Vulnerabilities
+    description: Prepare for Minimize Microservice Vulnerabilities.
+    examDomain: Minimize Microservice Vulnerabilities
+    weight: 20
+    learningOutcomes:
+    - Use appropriate pod security standards
+    - Manage Kubernetes secrets
+    - Understand and implement isolation techniques (multi-tenancy, sandboxed containers, etc.)
+    - Implement Pod-to-Pod encryption (Cilium, Istio)
+    content:
+    - ref: ATS034
+      repository: https://github.com/astrona-io/ATS034
+      path: .
+      version: 0.1.0
+  - id: ATP007-STG005
+    title: Supply Chain Security
+    description: Prepare for Supply Chain Security.
+    examDomain: Supply Chain Security
+    weight: 20
+    learningOutcomes:
+    - Minimize base image footprint
+    - Understand your supply chain (e.g. SBOM, CI/CD, artifact repositories)
+    - Secure your supply chain (permitted registries, sign and validate artifacts, etc.)
+    - Perform static analysis of user workloads and container images (e.g. Kubesec, KubeLinter)
+    content:
+    - ref: ATS035
+      repository: https://github.com/astrona-io/ATS035
+      path: .
+      version: 0.1.0
+  - id: ATP007-STG006
+    title: Monitoring, Logging and Runtime Security
+    description: Prepare for Monitoring, Logging and Runtime Security.
+    examDomain: Monitoring, Logging and Runtime Security
+    weight: 20
+    learningOutcomes:
+    - Perform behavioral analytics to detect malicious activities
+    - Detect threats within physical infrastructure, apps, networks, data, users and workloads
+    - Investigate and identify phases of attack and bad actors within the environment
+    - Ensure immutability of containers at runtime
+    - Use Kubernetes audit logs to monitor access
+    content:
+    - ref: ATS036
+      repository: https://github.com/astrona-io/ATS036
+      path: .
+      version: 0.1.0
