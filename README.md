@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://astrona.io/courses/certified-kubernetes-security-specialist">
+    <img src="https://astrona.io/courses/certified-kubernetes-security-specialist/banner.svg" alt="Certified Kubernetes Security Specialist: exam domains on Astrona" width="100%">
+  </a>
+</p>
+
 # ATP007 — Certified Kubernetes Security Specialist (CKS)
 
 Preparation scaffold: one stage per exam domain, connected through `path.yaml`
