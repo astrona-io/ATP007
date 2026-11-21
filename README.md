@@ -6,9 +6,9 @@
 
 # ATP007 — Certified Kubernetes Security Specialist (CKS)
 
-Preparation scaffold: one stage per exam domain, connected through `path.yaml`
-to a training series repository. New material is planned, and the course
-registration in `astrona-content` stays **draft**.
+The CKS course track: one stage per exam domain, connected through `path.yaml`
+to a training series repository with readings, graded labs and playgrounds.
+The course registration in `astrona-content` is published.
 
 This exam is part of the current Golden Kubestronaut requirements.
 

@@ -1,13 +1,17 @@
-# Preparation path. Keep its course registration draft until content is ready.
+# Course track: Certified Kubernetes Security Specialist (CKS).
+# One stage per exam domain, built from ATS031-ATS036. Change the content in
+# the stage repositories; this file only says where it is and how it is shown.
 apiVersion: content.astrona.io/v1alpha1
 kind: TrainingPath
 metadata:
   id: ATP007
   slug: certified-kubernetes-security-specialist
   title: Certified Kubernetes Security Specialist (CKS)
-  description: 'Preparation path for CKS: one training series per curriculum domain. Content authoring
-    is planned.'
-  version: 0.1.0
+  description: 'The Certified Kubernetes Security Specialist track: one course per exam domain (cluster
+    setup, cluster hardening, system hardening, microservice vulnerabilities, supply chain security,
+    and monitoring, logging and runtime security) with readings, graded labs and hands-on playgrounds
+    that run on your own computer with the Astrona CLI.'
+  version: 1.0.0
   language: en
   authors:
   - name: Paris Nakita Kejser
@@ -27,8 +31,9 @@ spec:
     examId: CKS
     provider: CNCF / The Linux Foundation
   prerequisites:
-  - Basic command-line knowledge and familiarity with the subject of the exam.
-  - A computer capable of running the environments selected during content authoring.
+  - Working knowledge of Kubernetes resources, YAML and kubectl, at the level of the CKA exam.
+  - A computer that can run the Astrona CLI with Docker or Podman for the kind labs, and qemu for the
+    labs that need a full virtual machine.
   - Pass CKA before attempting the CKS exam, as required by The Linux Foundation.
   learningOutcomes:
   - Prepare for the Cluster Setup domain.
@@ -54,7 +59,7 @@ spec:
     - ref: ATS031
       repository: https://github.com/astrona-io/ATS031
       path: .
-      version: 0.1.0
+      version: 1.0.0
   - id: ATP007-STG002
     title: Cluster Hardening
     description: Prepare for Cluster Hardening.
@@ -70,7 +75,7 @@ spec:
     - ref: ATS032
       repository: https://github.com/astrona-io/ATS032
       path: .
-      version: 0.1.0
+      version: 1.0.0
   - id: ATP007-STG003
     title: System Hardening
     description: Prepare for System Hardening.
@@ -85,7 +90,7 @@ spec:
     - ref: ATS033
       repository: https://github.com/astrona-io/ATS033
       path: .
-      version: 0.1.0
+      version: 1.0.0
   - id: ATP007-STG004
     title: Minimize Microservice Vulnerabilities
     description: Prepare for Minimize Microservice Vulnerabilities.
@@ -100,7 +105,7 @@ spec:
     - ref: ATS034
       repository: https://github.com/astrona-io/ATS034
       path: .
-      version: 0.1.0
+      version: 1.0.0
   - id: ATP007-STG005
     title: Supply Chain Security
     description: Prepare for Supply Chain Security.
@@ -115,7 +120,7 @@ spec:
     - ref: ATS035
       repository: https://github.com/astrona-io/ATS035
       path: .
-      version: 0.1.0
+      version: 1.0.0
   - id: ATP007-STG006
     title: Monitoring, Logging and Runtime Security
     description: Prepare for Monitoring, Logging and Runtime Security.
@@ -131,4 +136,4 @@ spec:
     - ref: ATS036
       repository: https://github.com/astrona-io/ATS036
       path: .
-      version: 0.1.0
+      version: 1.0.0
